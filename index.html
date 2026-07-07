@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hack Latency.io</title>
+    <link
+      rel="shortcut icon"
+      href="assets/Black White Minimal Simple Modern Pixel Neon  Modern AI Logo.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +25,28 @@
       <button id="analyse">Execute Threat Audit</button>
     </div>
     <div class="reportScreen">
-      
+      <div class="systemStatus">
+        <h5 id="sysStat-title">SYSTEM STATUS</h5>
+        <h5 id="sysStat-value">IDLE</h5>
+        <h5 id="sysStat-description">Awaiting credential input...</h5>
+      </div>
+      <div class="passwordLength">
+        <h5 id="pass-title">PASSWORD LENGTH</h5>
+        <h5 id="pass-value">0 Characters</h5>
+        <h5 id="pass-recommended">Recommended: 12+</h5>
+      </div>
+      <div class="estimateCrackTime">
+        <h5 id="est-title">ESTIMATED CRACK TIME</h5>
+        <h5 id="est-value">--</h5>
+        <h5 id="est-description">Awaiting analysis...</h5>
+      </div>
+      <div class="characterType">
+          <h5>CHARACTER TYPES</h5>
+          <h6 id="uppercase">UpperCase</h6>
+          <h6 id="lowercase">LowerCase</h6>
+          <h6 id="numbers">Numbers</h6>
+          <h6 id="symbols">Symbols</h6>
+      </div>
     </div>
   </body>
 </html>
