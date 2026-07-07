@@ -19,7 +19,7 @@ body {
 }
 
 :root {
-  --bg: #0c0c0c;
+  --bg: #0a0a0a;
   --headerText: #00ffff;
   --inputBg: #00ffff;
   --neon-cyan: #00f0ff;
@@ -60,11 +60,11 @@ header>h4 {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2.1rem;
 }
 
 .main-screen>input {
-  padding: 2.5vh 10vw 2.5vh 80px;
+  padding: 2.5vh 10vw 2.5vh 50px;
   background-color: var(--inputBg);
   border: none;
   font-size: 1.1rem;
@@ -87,7 +87,7 @@ header>h4 {
 }
 
 .main-screen>button {
-  padding: 2.5vh 5vw;
+  padding: 2vh 3vw;
   font-size: 1rem;
   font-family: "Share Tech Mono", monospace;
   font-weight: 600;
@@ -104,4 +104,106 @@ header>h4 {
   background-color: rgb(1, 255, 1);
   box-shadow: 8px 8px 0px rgba(1, 255, 1, 0.514);
 
+}
+.reportScreen{
+  width: 100%;
+  display: flex;
+  align-items: center ;
+  justify-content: space-around;
+}
+.reportScreen>.passwordLength{
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: .7px solid var(--neon-cyan);
+  padding: 1.2vh 2vw;
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+}
+.passwordLength>h5{
+  font-family: "Share Tech Mono", monospace;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-size: .85rem;
+}
+#pass-recommended{
+  color: rgb(165, 165, 165);
+}
+
+.reportScreen>.systemStatus {
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: .7px solid var(--neon-cyan);
+  padding: 1.2vh 2vw;
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+}
+
+.systemStatus>h5 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+}
+#sysStat-value{
+  color: rgb(165, 165, 165);
+}
+.reportScreen>.estimateCrackTime {
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: .7px solid var(--neon-cyan);
+  padding: 1.2vh 2vw;
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+}
+
+.estimateCrackTime>h5 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+}
+
+.reportScreen>.characterType {
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: .7px solid var(--neon-cyan);
+  padding: 1.2vh 2vw;
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+}
+
+.characterType>h5 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+  margin-bottom: 1vh;
+}
+.characterType>h6 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+  color:rgb(165, 165, 165) ;
 }
