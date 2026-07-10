@@ -60,7 +60,7 @@ header>h4 {
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 2.1rem;
+  gap: 2rem;
 }
 
 .main-screen>input {
@@ -105,13 +105,16 @@ header>h4 {
   box-shadow: 8px 8px 0px rgba(1, 255, 1, 0.514);
 
 }
-.reportScreen{
+
+.reportScreen {
   width: 100%;
   display: flex;
-  align-items: center ;
+  align-items: center;
   justify-content: space-around;
+  margin-bottom: 3vh;
 }
-.reportScreen>.passwordLength{
+
+.reportScreen>.passwordLength {
   color: var(--neon-cyan);
   display: flex;
   align-items: start;
@@ -123,18 +126,23 @@ header>h4 {
   padding: 1.2vh 2vw;
   box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
 }
-.passwordLength>h5{
+
+.passwordLength>h5 {
   font-family: "Share Tech Mono", monospace;
-    font-weight: 600;
-    font-style: normal;
-    letter-spacing: 2px;
-    font-size: .85rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
 }
-#pass-recommended{
+
+#pass-recommended {
   color: rgb(165, 165, 165);
 }
 
 .reportScreen>.systemStatus {
+  position: absolute;
+  margin-bottom: 55vh;
+  margin-right: 68vw;
   color: var(--neon-cyan);
   display: flex;
   align-items: start;
@@ -154,9 +162,11 @@ header>h4 {
   letter-spacing: 2px;
   font-size: .85rem;
 }
-#sysStat-value{
+
+#sysStat-value {
   color: rgb(165, 165, 165);
 }
+
 .reportScreen>.estimateCrackTime {
   color: var(--neon-cyan);
   display: flex;
@@ -179,6 +189,9 @@ header>h4 {
 }
 
 .reportScreen>.characterType {
+  position: absolute;
+  margin-bottom: 55vh;
+  margin-left: 65vw;
   color: var(--neon-cyan);
   display: flex;
   align-items: start;
@@ -199,11 +212,142 @@ header>h4 {
   font-size: .85rem;
   margin-bottom: 1vh;
 }
+
 .characterType>h6 {
   font-family: "Share Tech Mono", monospace;
   font-weight: 600;
   font-style: normal;
   letter-spacing: 2px;
   font-size: .85rem;
-  color:rgb(165, 165, 165) ;
+  color: rgb(165, 165, 165);
+}
+
+.reportScreen>.characterSetSize {
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: .7px solid var(--neon-cyan);
+  padding: 1.2vh 2vw;
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+}
+
+.characterSetSize>h5 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+  margin-bottom: 1vh;
+}
+
+.reportScreen-row-2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 7vh;
+}
+
+.reportScreen-row-2>.searchSpace {
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: .7px solid var(--neon-cyan);
+  padding: 1.2vh 2vw;
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+}
+
+.searchSpace>h5 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+  margin-bottom: 1vh;
+}
+
+.reportScreen-row-2>.entropy {
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: .7px solid var(--neon-cyan);
+  padding: 1.2vh 2vw;
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+}
+
+.entropy>h5 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+  margin-bottom: 1vh;
+}
+
+.reportScreen-row-2>.threat {
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: .7px solid var(--neon-cyan);
+  padding: 1.2vh 2vw;
+  box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+}
+
+.threat>h5 {
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+  margin-bottom: 1vh;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
+  padding: 2vh;
+  border-top: 2px solid var(--neon-cyan);
+  color: var(--headerText);
+  font-family: "Share Tech Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-size: .85rem;
+  transition:all linear 0.3s;
+}
+
+#footerTitle {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+#copyright{
+  font-size: 1.5rem;
+    vertical-align: middle;
+    padding-left: 1vw;
+}
+
+footer:hover{
+  background-color: rgb(1, 255, 1);
+  color: #0a0a0a;
+  border: none;
 }
