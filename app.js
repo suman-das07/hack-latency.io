@@ -102,3 +102,52 @@ function systemStatus(passwordLength) {
   }
 
 }
+
+function characterTypes(readPass) {
+  if (readPass.length === 0) {
+    hasUpperCase.style.color = "rgb(165, 165, 165)";
+    hasLowerCase.style.color = "rgb(165, 165, 165)";
+    hasNumbers.style.color = "rgb(165, 165, 165)";
+    hasSymbols.style.color = "rgb(165, 165, 165)";
+    return;
+  }
+  let upperCase = /[A-Z]/.test(readPass);
+  let lowerCase = /[a-z]/.test(readPass);
+  let numbers = /[0-9]/.test(readPass);
+  let symbols = /[^A-Za-z0-9]/.test(readPass);
+
+  if (!upperCase) {
+    hasUpperCase.style.color = "red";
+  }
+  else {
+    hasUpperCase.style.color = "rgb(1, 255, 1)";
+  }
+
+  if (!lowerCase) {
+    hasLowerCase.style.color = "red";
+  }
+  else {
+    hasLowerCase.style.color = "rgb(1, 255, 1)";
+  }
+
+  if (!numbers) {
+    hasNumbers.style.color = "red";
+  }
+  else {
+    hasNumbers.style.color = "rgb(1, 255, 1)";
+  }
+
+  if (!symbols) {
+    hasSymbols.style.color = "red";
+  }
+  else {
+    hasSymbols.style.color = "rgb(1, 255, 1)";
+  }
+
+  characterSetSize(upperCase,
+    lowerCase,
+    numbers,
+    symbols,
+    readPass.length
+  )
+}
