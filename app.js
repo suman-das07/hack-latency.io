@@ -297,3 +297,84 @@ function entropy(characterSet, passwordLength, searchSpaceval) {
   estimateCrackTime(searchSpaceval, passwordLength, characterSet, entropyVal);
 
 }
+
+function estimateCrackTime(searchSpaceval, passwordLength, characterSet, entropyVal) {
+
+  let estCrackTimeval = searchSpaceval / 1e11;
+
+  const year = 31536000;
+  const Thyear = 1000;
+  const MiYear = 1000000;
+  const BiYear = 1000000000;
+
+  if (estCrackTimeval < 60) {
+    estCrackTimeValue.textContent =
+      `${estCrackTimeval.toFixed(2)} Seconds`;
+    estCrackTimeDesc.textContent = `Instant Compromise`;
+    estCrackTimeDesc.style.color = "red";
+  }
+
+  else if (estCrackTimeval < 3600) {
+    let estMins = estCrackTimeval / 60;
+    estCrackTimeValue.textContent =
+      `${estMins.toFixed(2)} Minutes`;
+    estCrackTimeDesc.textContent = `Rapidly Crackable`;
+    estCrackTimeDesc.style.color = "red";
+  }
+
+  else if (estCrackTimeval < 86400) {
+    let estHours = estCrackTimeval / 3600;
+    estCrackTimeValue.textContent =
+      `${estHours.toFixed(2)} Hours`;
+    estCrackTimeDesc.textContent = `Low Resistance`;
+    estCrackTimeDesc.style.color = "yellow";
+  }
+
+  else if (estCrackTimeval < year) {
+    let estDays = estCrackTimeval / 86400;
+    estCrackTimeValue.textContent =
+      `${estDays.toFixed(2)} Days`;
+    estCrackTimeDesc.textContent = `Moderate Resistance`;
+    estCrackTimeDesc.style.color = "yellow";
+  }
+
+  else if (estCrackTimeval < year * Thyear) {
+    let estYear = estCrackTimeval / year;
+    estCrackTimeValue.textContent =
+      `${estYear.toFixed(2)} Years`;
+    estCrackTimeDesc.textContent = `High Resistance`;
+    estCrackTimeDesc.style.color = "rgb(1, 255, 1)";
+  }
+
+  else if (estCrackTimeval < year * MiYear) {
+    let estThYears = estCrackTimeval / (year * Thyear);
+    estCrackTimeValue.textContent =
+      `${estThYears.toFixed(2)} Thousand Years`;
+    estCrackTimeDesc.textContent = `Extremely Resistant`;
+    estCrackTimeDesc.style.color = "rgb(1, 255, 1);";
+  }
+
+  else if (estCrackTimeval < year * BiYear) {
+    let estMiYears = estCrackTimeval / (year * MiYear);
+    estCrackTimeValue.textContent =
+      `${estMiYears.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      })} Million Years`;
+    estCrackTimeDesc.textContent = `Computationally Impractical`;
+    estCrackTimeDesc.style.color = "rgb(1, 255, 1);";
+  }
+
+  else {
+    let estBiYears = estCrackTimeval / (year * BiYear);
+    estCrackTimeValue.textContent =
+      `${estBiYears.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      })} Billion Years`;
+    estCrackTimeDesc.textContent = `Computationally Infeasible`;
+    estCrackTimeDesc.style.color = "rgb(1, 255, 1);";
+  }
+
+  threatanalysis(passwordLength, characterSet, entropyVal, estCrackTimeval);
+}
