@@ -32,3 +32,16 @@ let estCTCard = document.querySelector(".estimateCrackTime");
 let threatVal = document.querySelector("#threatValue");
 let threatDesc = document.querySelector("#threatDescp");
 let threatCard = document.querySelector(".threat");
+
+analyseBtn.addEventListener("click", function () {
+  let readPass = passInp.value;
+
+  let passwordLength = passLength(readPass);
+
+  passUI(passwordLength);
+
+  systemStatus(passwordLength);
+
+  characterTypes(readPass);
+
+});
