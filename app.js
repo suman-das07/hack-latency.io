@@ -71,3 +71,34 @@ function passUI(passwordLength) {
     passLengthCard.style.boxShadow = "8px 8px 0px rgba(1, 255, 1, 0.514)";
   }
 }
+
+function systemStatus(passwordLength) {
+  if (passwordLength === 0) {
+    sysStatVal.textContent = `IDLE`;
+    sysStatVal.style.color = "rgb(165, 165, 165)";
+
+
+  }
+  else if (passwordLength < 6) {
+    sysStatVal.textContent = `BREACHED`;
+    sysStatVal.style.color = "red";
+    sysStatCard.style.border = ".7px solid red";
+    sysStatCard.style.boxShadow = "8px 8px 0px #ff000096";
+    sysStatDes.textContent = `Too short. Easily cracked.`;
+  }
+  else if (passwordLength <= 12) {
+    sysStatVal.textContent = `VULNERABLE`;
+    sysStatVal.style.color = "yellow";
+    sysStatCard.style.border = ".7px solid yellow";
+    sysStatCard.style.boxShadow = "8px 8px 0px #ffe6008e";
+    sysStatDes.textContent = `Weak. Needs more variety.`;
+  }
+  else {
+    sysStatVal.textContent = `SECURE`;
+    sysStatVal.style.color = "rgb(1, 255, 1)";
+    sysStatCard.style.border = ".7px solid rgb(1, 255, 1)";
+    sysStatCard.style.boxShadow = "8px 8px 0px rgba(1, 255, 1, 0.514)";
+    sysStatDes.textContent = `Strong. Safe from hackers.`;
+  }
+
+}
