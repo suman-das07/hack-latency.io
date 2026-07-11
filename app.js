@@ -45,3 +45,7 @@ analyseBtn.addEventListener("click", function () {
   characterTypes(readPass);
 
 });
+
+function passLength(readPass) {
+  return readPass.length;
+}
