@@ -151,3 +151,59 @@ function characterTypes(readPass) {
     readPass.length
   )
 }
+
+function characterSetSize(
+  upperCase,
+  lowerCase,
+  numbers,
+  symbols,
+  passwordLength
+) {
+
+  let characterSet = 0;
+
+  if (upperCase) {
+    characterSet += 26;
+  }
+
+  if (lowerCase) {
+    characterSet += 26;
+  }
+
+  if (numbers) {
+    characterSet += 10;
+  }
+  if (symbols) {
+    characterSet += 32;
+  }
+  charSetVal.textContent = `${characterSet} Characters`;
+
+  if (characterSet === 0) {
+    charSetVal.style.color = "rgb(165, 165, 165)";
+    charSetDes.textContent = `Awaiting Input`
+  }
+  else if (characterSet === 26) {
+    charSetVal.style.color = "red";
+    charSetDes.textContent = `Only one character type`;
+  }
+  else if (characterSet === 36) {
+    charSetVal.style.color = "orange";
+    charSetDes.textContent = `Lowercase + Numbers`;
+  }
+  else if (characterSet === 52) {
+    charSetVal.style.color = "yellow";
+    charSetDes.textContent = `UpperCase + LowerCase`;
+  }
+  else if (characterSet === 62) {
+    charSetVal.style.color = "yellow";
+    charSetDes.textContent = `Letters + Numbers`;
+  }
+  else if (characterSet === 94) {
+    charSetVal.style.color = "rgb(1, 255, 1)";
+    charSetDes.textContent = `All Character Types`;
+  }
+
+  searchSpace(characterSet, passwordLength);
+
+  return characterSet;
+}
