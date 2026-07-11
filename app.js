@@ -378,3 +378,58 @@ function estimateCrackTime(searchSpaceval, passwordLength, characterSet, entropy
 
   threatanalysis(passwordLength, characterSet, entropyVal, estCrackTimeval);
 }
+
+function threatanalysis(passwordLength, characterSet, entropyVal, estCrackTimeval) {
+
+  if (passwordLength === 0) {
+    threatVal.textContent = "NULL";
+    threatVal.style.color = "rgb(165, 165, 165)";
+    threatDesc.textContent = "Awaiting Analysis";
+    return;
+  }
+  const oneMinute = 60;
+  const oneDay = 86400;
+  const oneYear = 31536000;
+  const oneHundredYears = oneYear * 100;
+  const oneMillionYears = oneYear * 1000000;
+
+  if (passwordLength < 6 || characterSet === 26 || entropyVal < 28 || estCrackTimeval < oneMinute) {
+    threatVal.textContent = "CRITICAL";
+    threatVal.style.color = "red";
+    threatDesc.textContent = "Critical exploit window detected.";
+    threatCard.style.border = ".7px solid red";
+    threatCard.style.boxShadow = "8px 8px 0px #ff000096";
+  }
+  else if ((passwordLength >= 6 && passwordLength <= 8) || (entropyVal >= 28 && entropyVal <= 40) || estCrackTimeval < oneDay) {
+    threatVal.textContent = "VULNERABLE";
+    threatVal.style.color = "orange";
+    threatDesc.textContent = "Susceptible to rapid targeted attacks.";
+    threatCard.style.border = ".7px solid orange";
+    threatCard.style.boxShadow = "8px 8px 0px orange";
+  }
+
+  else if (passwordLength >= 16 && characterSet === 94 && entropyVal >= 80 && estCrackTimeval >= oneMillionYears) {
+    threatVal.textContent = "FORTIFIED";
+    threatVal.style.color = "rgb(0, 225, 255)";
+    threatDesc.textContent = "Military grade architectural defense.";
+    threatCard.style.border = ".7px solid rgb(1, 255, 1)";
+    threatCard.style.boxShadow = "8px 8px 0px rgba(1, 255, 1, 0.514)";
+
+  }
+
+  else if (passwordLength >= 12 && characterSet >= 62 && entropyVal >= 60 && estCrackTimeval >= oneHundredYears) {
+    threatVal.textContent = "SECURE";
+    threatVal.style.color = "rgb(1, 255, 1)";
+    threatDesc.textContent = "Strong configuration. Safe from standard arrays.";
+    threatCard.style.border = ".7px solid rgb(1, 255, 1)";
+    threatCard.style.boxShadow = "8px 8px 0px rgba(1, 255, 1, 0.514)";
+  }
+  else {
+    threatVal.textContent = "MODERATE";
+    threatVal.style.color = "yellow";
+    threatDesc.textContent = "Baseline complexity requirements met.";
+    threatCard.style.border = ".7px solid yellow";
+    threatCard.style.boxShadow = "8px 8px 0px #ffe6008e";
+  }
+
+}
