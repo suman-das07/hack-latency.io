@@ -49,3 +49,25 @@ analyseBtn.addEventListener("click", function () {
 function passLength(readPass) {
   return readPass.length;
 }
+
+function passUI(passwordLength) {
+  passValue.textContent = `${passwordLength} Characters`;
+
+  if (passwordLength < 6) {
+    passValue.style.color = "red";
+    passLengthCard.style.border = ".7px solid red";
+    passLengthCard.style.boxShadow = "8px 8px 0px #ff000096";
+
+
+  }
+  else if (passwordLength <= 12) {
+    passValue.style.color = "yellow";
+    passLengthCard.style.border = ".7px solid yellow";
+    passLengthCard.style.boxShadow = "8px 8px 0px #ffe6008e";
+  }
+  else {
+    passValue.style.color = "rgb(1, 255, 1)";
+    passLengthCard.style.border = ".7px solid rgb(1, 255, 1)";
+    passLengthCard.style.boxShadow = "8px 8px 0px rgba(1, 255, 1, 0.514)";
+  }
+}
