@@ -256,3 +256,44 @@ function searchSpace(characterSet, passwordLength) {
 
 
 }
+
+function entropy(characterSet, passwordLength, searchSpaceval) {
+  let entropyVal = passwordLength * Math.log2(characterSet);
+
+  entropyValue.textContent = `${entropyVal.toFixed(2)} Bits`;
+
+  if (entropyVal < 28) {
+
+    entropyValue.style.color = "red";
+    entropyCard.style.border = ".7px solid red";
+    entropyCard.style.boxShadow = "8px 8px 0px #ff000096";
+    entropyDesc.textContent = `Insufficient Entropy. Highly Predictable`;
+  }
+  else if (entropyVal >= 28 && entropyVal < 35) {
+    entropyValue.style.color = "orange";
+    entropyCard.style.border = ".7px solid orange";
+    entropyCard.style.boxShadow = "8px 8px 0px rgba(255, 123, 0, 0.589)";
+    entropyDesc.textContent = `Limited Entropy. Low Randomness`
+  }
+  else if (entropyVal >= 35 && entropyVal < 59) {
+    entropyValue.style.color = "yellow";
+    entropyCard.style.border = ".7px solid yellow";
+    entropyCard.style.boxShadow = "8px 8px 0px #ffe6008e";
+    entropyDesc.textContent = `Moderate Entropy. Moderate Randomness `;
+  }
+  else if (entropyVal >= 59 && entropyVal < 79) {
+    entropyValue.style.color = "green";
+    entropyCard.style.border = ".7px solid green";
+    entropyCard.style.boxShadow = "8px 8px 0px rgba(1, 255, 1, 0.514)";
+    entropyDesc.textContent = `High Entropy. High Randomness`;
+  }
+  else {
+    entropyValue.style.color = "rgb(1, 255, 1)";
+    entropyCard.style.border = ".7px solid rgb(1, 255, 1)";
+    entropyCard.style.boxShadow = "8px 8px 0px rgba(1, 255, 1, 0.514)";
+    entropyDesc.textContent = `Exceptional Entropy. Cryptographically Strong`;
+  }
+
+  estimateCrackTime(searchSpaceval, passwordLength, characterSet, entropyVal);
+
+}
