@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Silkscreen&size=50&duration=2500&pause=1000&color=00F0FF&center=true&vCenter=true&width=700&lines=HACK+LATENCY.IO;PASSWORD+THREAT+ANALYTICS;100%25+CLIENT-SIDE+%E2%80%A2+ZERO+BACKEND" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Silkscreen&size=50&duration=2500&pause=1000&color=00F0FF&center=true&vCenter=true&width=1001&lines=HACK+LATENCY.IO;PASSWORD+THREAT+ANALYTICS;100%25+CLIENT-SIDE+%E2%80%A2+ZERO+BACKEND" alt="Typing SVG" />
 
 <br/>
 
@@ -22,16 +22,6 @@
 ### A futuristic, terminal-styled cybersecurity console that audits password strength entirely in your browser — no servers, no APIs, no data ever leaves the device.
 
 <br/>
-
-<a href="#-overview"><b>Overview</b></a> •
-<a href="#-live-demo"><b>Live Demo</b></a> •
-<a href="#-features"><b>Features</b></a> •
-<a href="#-tech-stack"><b>Tech Stack</b></a> •
-<a href="#-getting-started"><b>Getting Started</b></a> •
-<a href="#-architecture"><b>Architecture</b></a> •
-<a href="#-roadmap"><b>Roadmap</b></a> •
-<a href="#-author"><b>Author</b></a>
-
 </div>
 
 <br/>
