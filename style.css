@@ -78,6 +78,7 @@ header>h4 {
 }
 
 .main-screen>input::placeholder {
+  width: 100%;
   font-size: 1rem;
   color: black;
   font-family: "Share Tech Mono", monospace;
@@ -153,7 +154,10 @@ header>h4 {
   border: .7px solid var(--neon-cyan);
   padding: 1.2vh 2vw;
   box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
+  /* box-shadow: 8px 8px 0px #ffe6008e; */
+
 }
+
 
 .systemStatus>h5 {
   font-family: "Share Tech Mono", monospace;
@@ -176,7 +180,7 @@ header>h4 {
   flex-wrap: wrap;
   gap: 1rem;
   border: .7px solid var(--neon-cyan);
-  padding: 1.2vh 2vw;
+  padding: 2.5vh 2.5vw;
   box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
 }
 
@@ -200,7 +204,7 @@ header>h4 {
   flex-wrap: wrap;
   gap: 1rem;
   border: .7px solid var(--neon-cyan);
-  padding: 1.2vh 2vw;
+  padding: 1.5vh 2vw;
   box-shadow: 8px 8px 0px rgba(0, 255, 255, 0.425);
 }
 
@@ -350,4 +354,89 @@ footer:hover{
   background-color: rgb(1, 255, 1);
   color: #0a0a0a;
   border: none;
+}
+
+@media (max-width: 600px) {
+  header {
+    width: 90%;
+    margin: 2vh auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  marquee>h1 {
+    font-size: 8vw;
+  }
+
+  header>h4 {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+
+  .main-screen {
+    height: auto;
+    margin: 4vh 0;
+    gap: 1.5rem;
+  }
+
+  .main-screen>input {
+    width: 85%;
+    padding: 2vh 15px;
+    font-size: 1rem;
+    box-shadow: 5px 5px 0px rgba(0, 255, 255, 0.425);
+  }
+
+  .main-screen>button {
+    width: 85%;
+    padding: 2vh 0;
+    font-size: 1rem;
+    box-shadow: 5px 5px 0px rgba(0, 255, 255, 0.425);
+  }
+
+  .main-screen>button:hover {
+    box-shadow: 5px 5px 0px rgba(1, 255, 1, 0.514);
+  }
+
+  .reportScreen,
+  .reportScreen-row-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .reportScreen>.systemStatus,
+  .reportScreen>.characterType {
+    position: static;
+    margin: 0;
+    width: 85%;
+  }
+
+  .reportScreen>.passwordLength,
+  .reportScreen>.estimateCrackTime,
+  .reportScreen>.characterSetSize,
+  .reportScreen-row-2>.searchSpace,
+  .reportScreen-row-2>.entropy,
+  .reportScreen-row-2>.threat {
+    width: 85%;
+    box-sizing: border-box;
+    padding: 2vh 4vw;
+    box-shadow: 5px 5px 0px rgba(0, 255, 255, 0.425);
+  }
+
+  footer {
+    margin-top: 8vh;
+    padding: 3vh 20px;
+    flex-direction: column;
+    gap: 1vh;
+    text-align: center;
+  }
+
+  #copyright {
+    padding-left: 0;
+  }
 }
