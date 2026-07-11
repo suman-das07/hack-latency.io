@@ -207,3 +207,52 @@ function characterSetSize(
 
   return characterSet;
 }
+
+function searchSpace(characterSet, passwordLength) {
+  let searchSpaceval = Math.pow(characterSet, passwordLength);
+
+  if (searchSpaceval >= 1e9) {
+    srchSpaceVal.textContent = searchSpaceval.toExponential(2);
+  } else {
+    srchSpaceVal.textContent = searchSpaceval.toLocaleString();
+
+  }
+
+  if (searchSpaceval < 1e6) {
+    srchSpaceVal.style.color = "red";
+    searchSpaceCard.style.border = ".7px solid red";
+    searchSpaceCard.style.boxShadow = "8px 8px 0px #ff000096";
+    searchSpaceDesc.textContent = `🔴 Trivially Searchable`;
+  }
+  else if (searchSpaceval < 1e9) {
+    srchSpaceVal.style.color = "orange";
+    searchSpaceCard.style.border = ".7px solid orange";
+    searchSpaceCard.style.boxShadow = "8px 8px 0px rgba(255, 123, 0, 0.589)";
+    searchSpaceDesc.textContent = `🟠 Limited Search Space`;
+  }
+  else if (searchSpaceval < 1e12) {
+    srchSpaceVal.style.color = "yellow";
+    searchSpaceCard.style.border = ".7px solid yellow";
+    searchSpaceCard.style.boxShadow = "8px 8px 0px #ffe6008e";
+    searchSpaceDesc.textContent = `🟡 Moderate Search Space`;
+  }
+  else if (searchSpaceval < 1e18) {
+    srchSpaceVal.style.color = "green";
+    searchSpaceCard.style.border = ".7px solid green";
+    searchSpaceCard.style.boxShadow = "8px 8px 0px rgba(14, 194, 38, 0.479)";
+    searchSpaceDesc.textContent = `🟢 Large Search Space`;
+  }
+  else {
+    srchSpaceVal.style.color = "rgb(1, 255, 1)";
+    searchSpaceCard.style.border = ".7px solid rgb(1, 255, 1)";
+    searchSpaceCard.style.boxShadow = "8px 8px 0px rgba(1, 255, 1, 0.514)";
+    searchSpaceDesc.textContent = `🟢 Computationally Extensive`;
+  }
+
+  entropy(characterSet, passwordLength, searchSpaceval);
+
+
+  return searchSpaceval;
+
+
+}
